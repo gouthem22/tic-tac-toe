@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="game-container">
+        <h1>🎮 TIC-TAC-TOE 🎮</h1>
+        
+        <div class="mode-selection" id="modeSelection">
+            <h2 style="color: white; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Choose Game Mode</h2>
+            <button class="btn mode-btn" onclick="startGame('single')">🤖 Single Player (vs AI)</button>
+            <button class="btn mode-btn" onclick="startGame('multi')">👥 Two Players</button>
+        </div>
+        
+        <div class="game-info" id="gameInfo" style="display: none;">
+            <div class="game-mode" id="gameMode"></div>
+            <div class="current-player" id="currentPlayer">Current Player: X</div>
+            <div class="score-board">
+                <div class="score">Player X: <span id="scoreX">0</span></div>
+                <div class="score">Player O: <span id="scoreO">0</span></div>
+                <div class="score">Draws: <span id="scoreDraw">0</span></div>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard" style="display: none;">
+            <button class="cell" data-cell="0"></button>
+            <button class="cell" data-cell="1"></button>
+            <button class="cell" data-cell="2"></button>
+            <button class="cell" data-cell="3"></button>
+            <button class="cell" data-cell="4"></button>
+            <button class="cell" data-cell="5"></button>
+            <button class="cell" data-cell="6"></button>
+            <button class="cell" data-cell="7"></button>
+            <button class="cell" data-cell="8"></button>
+        </div>
+
+        <div class="message" id="gameMessage" style="display: none;">Let's play! X goes first!</div>
+
+        <div class="controls" id="gameControls" style="display: none;">
+            <button class="btn" onclick="resetGame()">🔄 New Game</button>
+            <button class="btn" onclick="resetScore()">📊 Reset Score</button>
+            <button class="btn" onclick="backToModeSelection()">⬅️ Back to Menu</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Licensed to <strong>Gouthem RS</strong>. All rights reserved.</p>
+            <p class="footer-subtitle">Colorful Interactive Tic-Tac-Toe Game</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
